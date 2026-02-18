@@ -154,3 +154,186 @@ div.step-text {
     font-size: 18px;
     opacity: 0.8;
 }
+.sessions-panel {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    padding: 16px;
+    margin: 0 auto 30px;
+    max-width: 640px;
+}
+
+.session-header {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.task-label-wrapper {
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    opacity: 0.8;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.task-label {
+    margin-top: 4px;
+    padding: 6px 10px;
+    border-radius: 4px;
+    border: none;
+    font-size: 14px;
+}
+
+.task-label:focus {
+    outline: 2px solid rgba(255, 255, 255, 0.6);
+}
+
+.clear-history {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background: transparent;
+    color: white;
+    padding: 6px 14px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.clear-history:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.session-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+
+.session-summary .total-time {
+    font-size: 20px;
+}
+
+.session-list table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.session-list th,
+.session-list td {
+    text-align: left;
+    padding: 6px 4px;
+}
+
+.session-list thead th {
+    opacity: 0.7;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+}
+
+.session-list tbody tr:nth-child(odd) {
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.session-note {
+    margin-top: 10px;
+    font-size: 11px;
+    opacity: 0.7;
+}
+
+@media (max-width: 600px) {
+    .timer {
+        font-size: 80px;
+    }
+
+    .sessions-panel {
+        margin: 0 10px 30px;
+    }
+}
+
+.session-header-actions {
+    display: flex;
+    gap: 6px;
+}
+
+.export-csv {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.export-csv:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.session-stats {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+    font-size: 12px;
+}
+
+.stat-block {
+    flex: 1;
+    min-width: 180px;
+}
+
+.stat-block span {
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    opacity: 0.7;
+    font-size: 10px;
+    margin-bottom: 4px;
+}
+
+.stat-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+}
+
+.stat-list li {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    padding: 2px 0;
+}
+
+.average-time {
+    font-size: 16px;
+}
+
+.sortable {
+    cursor: pointer;
+    position: relative;
+}
+
+.sortable:after {
+    content: "\25B2";
+    opacity: 0;
+    transition: opacity 0.2s;
+    position: absolute;
+    right: 6px;
+    font-size: 10px;
+}
+
+.sortable.sorted-asc:after,
+.sortable.sorted-desc:after {
+    opacity: 0.6;
+}
+
+.sortable.sorted-desc:after {
+    transform: rotate(180deg);
+}
