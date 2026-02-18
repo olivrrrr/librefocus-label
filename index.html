@@ -43,6 +43,45 @@
         <div class="counter">#1</div>
         <div class="step-text">Time to focus!</div>
     </div>
+    <div class="sessions-panel">
+        <div class="session-header">
+            <label class="task-label-wrapper">
+                Task label
+                <input type="text" class="task-label" placeholder="What are you working on?" />
+            </label>
+            <div class="session-header-actions">
+                <button class="export-csv" type="button">Export CSV</button>
+                <button class="clear-history" type="button">Clear history</button>
+            </div>
+        </div>
+        <div class="session-summary">
+            <span>Logged focus</span>
+            <strong class="total-time">0m</strong>
+        </div>
+        <div class="session-stats">
+            <div class="stat-block">
+                <span>Top labels</span>
+                <ul class="stat-list"></ul>
+            </div>
+            <div class="stat-block">
+                <span>Average focus</span>
+                <strong class="average-time">0m</strong>
+            </div>
+        </div>
+        <div class="session-list">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="sortable" data-sort="label">Label</th>
+                        <th class="sortable" data-sort="duration">Duration</th>
+                        <th class="sortable" data-sort="finished">Finished</th>
+                    </tr>
+                </thead>
+                <tbody class="session-table-body"></tbody>
+            </table>
+        </div>
+        <div class="session-note">Sessions persist locally; nothing leaves your browser.</div>
+    </div>
     <script src="main.js"></script>
 </body>
 
